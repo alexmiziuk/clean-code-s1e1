@@ -16,10 +16,12 @@ body {
 .small-container .link-info {
   font-family: fantasy, cursive;
 }
-
 @media (max-width:768px) {
-.small-container { text-align: center;
-}
+
+  .small-container {
+    text-align: center;
+  }
+
 }
 .main-container {
   display: block;
@@ -41,7 +43,7 @@ ul {
 li, h3 {
   list-style: none;
 }
-input,button{
+input, button{
   outline: none;
 }
 .add, .edit, .delete {
@@ -146,12 +148,10 @@ input#new-task {
 #input-task {
   display: block;
 }
-
 .edit-mode .task {
   display: inline-block;
   width: 224px
 }
-
 .edit-mode .name-task {
   display: none;
 }

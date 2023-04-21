@@ -31,7 +31,7 @@
 .task {
   width: 56%;
   display: inline-block;
-  flex-grow: 1
+  flex-grow: 1;
 }
 .input-wrapper {
   display: flex;
@@ -124,7 +124,7 @@ input#new-task {
   width: 324px;
 }
 .item-task > .task {
-  width: 226px
+  width: 226px;
 }
 .delete .remove-img {
   height: 2em;
@@ -150,7 +150,7 @@ input#new-task {
 }
 .edit-mode .task {
   display: inline-block;
-  width: 224px
+  width: 224px;
 }
 .edit-mode .name-task {
   display: none;

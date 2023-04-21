@@ -9,7 +9,7 @@
 // Event handling, user interaction is what starts the code execution.
 
 var taskInput=document.getElementById("input-task");//Add a new task.
-var addButton=document.getElementsByTagName("button")[0];//first button
+var addButton=document.querySelector(".add");//first button
 var incompleteTaskHolder=document.getElementById("incomplete-tasks");//ul of #incompleteTasks
 var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
 
@@ -17,10 +17,13 @@ var completedTasksHolder=document.getElementById("completed-tasks");//completed-
 //New task list item
 var createNewTaskElement=function(taskString){
 
-    var listItem=document.createElement("li");
+	var listItem = document.createElement("li");
+	listItem.classList.add('item-task');
+	
 
     //input (checkbox)
-    var checkBox=document.createElement("input");//checkbx
+	var checkBox = document.createElement("input");//checkbx
+	checkBox.classList.add("checkbox-completed"); // когда менять на БЭМ не забудь что тут тоже нужно менять
     //label
     var label=document.createElement("label");//label
     //input (text)
@@ -30,10 +33,11 @@ var createNewTaskElement=function(taskString){
 
     //button.delete
     var deleteButton=document.createElement("button");//delete button
-    var deleteButtonImg=document.createElement("img");//delete button image
+    var deleteButtonImg = document.createElement("img");//delete button image
+    deleteButtonImg.className = 'remove-img'
 
     label.innerText=taskString;
-    label.className='task';
+    label.className='name-task';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
@@ -82,24 +86,25 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector('input[type=text]');
-    var label=listItem.querySelector("label");
+    var editInput=listItem.querySelector(".task");
+    var label=listItem.querySelector(".name-task");
     var editBtn=listItem.querySelector(".edit");
-    var containsClass=listItem.classList.contains("editMode");
+    var containsClass=listItem.classList.contains("edit-mode");
     //If class of the parent is .editmode
     if(containsClass){
 
         //switch to .editmode
         //label becomes the inputs value.
         label.innerText=editInput.value;
-        editBtn.innerText="Edit";
+		 editBtn.innerText = "Edit";
     }else{
         editInput.value=label.innerText;
-        editBtn.innerText="Save";
-    }
+		 editBtn.innerText = "Save";
+		  }
+	
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("editMode");
+    listItem.classList.toggle("edit-mode");
 };
 
 
@@ -155,9 +160,9 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
-    var checkBox=taskListItem.querySelector("input[type=checkbox]");
-    var editButton=taskListItem.querySelector("button.edit");
-    var deleteButton=taskListItem.querySelector("button.delete");
+    var checkBox=taskListItem.querySelector(".checkbox-completed");
+    var editButton=taskListItem.querySelector(".edit");
+    var deleteButton=taskListItem.querySelector(".delete");
 
 
     //Bind editTask to edit button.

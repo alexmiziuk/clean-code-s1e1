@@ -15,7 +15,8 @@
 }
 .small-container 
 .link-info {
-  font-family: fantasy, cursive;
+  font-family: Fantasy, sans-serif;
+  font-weight: normal;
 }
 @media (max-width:768px) {
 
@@ -36,6 +37,7 @@
 }
 .input-wrapper {
   display: flex;
+  padding-top: 20px;
 }
 ul {
   margin: 0;

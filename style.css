@@ -112,7 +112,8 @@ button {
 .to-do__completed {
   margin: 0 10px;
 }
-.to-do__task > .to-do__name {
+.to-do__task >
+.to-do__name {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;

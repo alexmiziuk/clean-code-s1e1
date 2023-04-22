@@ -1,4 +1,3 @@
-/* Basic Style */
 .body {
   background-color: #f8f8f8;
   color: #333;
@@ -70,8 +69,6 @@ button {
 .to-do__delete:hover {
   color: var(--hover-color);
 }
-
-/* Heading */
 .to-do__title,
 .add-task__item {
   color: #333;
@@ -99,18 +96,6 @@ button {
 .to-do__input:focus {
   color: #333;
 }
-
-/* New Task */
-/* label[for="new-task"] {
-  display: block;
-  margin: 0 0 20px;
-}
-input#new-task {
-  width: 318px;
-} */
-
-/* Task list */
-
 .to-do__task {
   overflow: hidden;
   padding: 20px 0;
@@ -120,23 +105,19 @@ input#new-task {
   justify-content: space-between;
   align-items: center;
 }
-
 .to-do__task > * {
   vertical-align: middle;
 }
-
 .to-do__task >
 .to-do__completed {
   margin: 0 10px;
 }
-
 .to-do__task > .to-do__name {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 324px;
 }
-
 .to-do__task >
 .to-do__input {
   width: 226px;
@@ -151,15 +132,11 @@ input#new-task {
 .to-do__img:hover {
   transform: rotateZ(0);
 }
-
-/* Completed */
 #completed-tasks
 .to-do__name {
   text-decoration: line-through;
   color: #888;
 }
-
-/* Edit Task */
 .to-do__input {
   display: none;
 }

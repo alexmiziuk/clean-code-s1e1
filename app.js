@@ -17,13 +17,13 @@ var completedTasksHolder=document.getElementById("completed-tasks");//completed-
 //New task list item
 var createNewTaskElement=function(taskString){
 
-	var listItem = document.createElement("li");
-	listItem.classList.add('to-do__task');
-	
+    var listItem = document.createElement("li");
+    listItem.classList.add('to-do__task');
+
 
     //input (checkbox)
-	var checkBox = document.createElement("input");//checkbx
-	checkBox.classList.add("to-do__completed"); // когда менять на БЭМ не забудь что тут тоже нужно менять
+    var checkBox = document.createElement("input");//checkbx
+    checkBox.classList.add("to-do__completed"); // когда менять на БЭМ не забудь что тут тоже нужно менять
     //label
     var label=document.createElement("label");//label
     //input (text)
@@ -96,12 +96,12 @@ var editTask=function(){
         //switch to .editmode
         //label becomes the inputs value.
         label.innerText=editInput.value;
-		 editBtn.innerText = "Edit";
+        editBtn.innerText = "Edit";
     }else{
         editInput.value=label.innerText;
-		 editBtn.innerText = "Save";
-		  }
-	
+        editBtn.innerText = "Save";
+    }
+
 
     //toggle .editmode on the parent.
     listItem.classList.toggle("to-do__task_edit");

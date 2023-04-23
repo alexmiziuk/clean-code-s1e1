@@ -76,6 +76,7 @@ button {
   display: inline-block;
   text-transform: uppercase;
 }
+.add-task__input,
 .to-do__input {
   margin: 0;
   width: 56%;
@@ -91,6 +92,7 @@ button {
   font-family: Lato, sans-serif;
   color: #888;
 }
+.add-task__input,
 .to-do__input:focus {
   color: #333;
 }

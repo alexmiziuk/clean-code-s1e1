@@ -42,7 +42,7 @@ var createNewTaskElement=function(taskString){
     //Each elements, needs appending
     checkBox.type="checkbox";
     editInput.type="text";
-    editInput.className="to-do__input";
+    editInput.className="to-do__input to-do__input_invisible";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="to-do__edit";
@@ -95,18 +95,18 @@ var editTask=function(){
 
         //switch to .editmode
         //label becomes the inputs value.
-        label.innerText=editInput.value;
-		 editBtn.innerText = "Edit";
-		
+      label.innerText=editInput.value;
+      editBtn.innerText = "Edit";
     }else{
-        editInput.value=label.innerText;
-		 editBtn.innerText = "Save";
-		 label.classList.add("to-do__name_invisible")
+      editInput.value=label.innerText;
+      editBtn.innerText = "Save";
+      label.classList.add("to-do__name_invisible");
+      editInput.classList.add("to-do__input_invisible");
     }
 
 
     //toggle .editmode on the parent.
-	listItem.classList.toggle("to-do__task_edit");
+    listItem.classList.toggle("to-do__task_edit");
 };
 
 
@@ -115,9 +115,10 @@ var deleteTask=function(){
     console.log("Delete Task...");
 
     var listItem=this.parentNode;
-    var ul=listItem.parentNode;
+   /*  var ul=listItem.parentNode; */
     //Remove the parent list item from the ul.
-    ul.removeChild(listItem);
+    /* ul.removeChild(listItem); */
+    listItem.classList.add("to-do__task_remove");
 
 }
 

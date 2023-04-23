@@ -119,10 +119,6 @@ button {
   font-size: 18px;
   width: 324px;
 }
-.to-do__task >
-.to-do__input {
-  width: 226px;
-}
 .to-do__delete
 .to-do__img {
   height: 2em;
@@ -138,7 +134,7 @@ button {
   text-decoration: line-through;
   color: #888;
 }
-.to-do__input {
+.to-do__input_invisible {
   display: none;
 }
 #input-task {
@@ -151,5 +147,8 @@ button {
 }
 .to-do__task_edit 
 .to-do__name_invisible {
+  display: none;
+}
+.to-do__task_remove {
   display: none;
 }

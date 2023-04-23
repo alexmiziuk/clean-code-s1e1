@@ -29,11 +29,6 @@
   width: 500px;
   margin: 0 auto 0;
 }
-.to-do__input {
-  width: 56%;
-  display: inline-block;
-  flex-grow: 1;
-}
 .add-task__wrapper {
   display: flex;
   padding-top: 20px;
@@ -83,6 +78,9 @@ button {
 }
 .to-do__input {
   margin: 0;
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
   font-size: 18px;
   line-height: 18px;
   height: 21px;
@@ -149,7 +147,7 @@ button {
   display: inline-block;
   width: 224px;
 }
-.to-do__task_edit
-.to-do__name {
+.to-do__task_edit 
+.to-do__name_invisible {
   display: none;
 }

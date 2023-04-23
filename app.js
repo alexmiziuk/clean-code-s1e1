@@ -96,15 +96,17 @@ var editTask=function(){
         //switch to .editmode
         //label becomes the inputs value.
         label.innerText=editInput.value;
-        editBtn.innerText = "Edit";
+		 editBtn.innerText = "Edit";
+		
     }else{
         editInput.value=label.innerText;
-        editBtn.innerText = "Save";
+		 editBtn.innerText = "Save";
+		 label.classList.add("to-do__name_invisible")
     }
 
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("to-do__task_edit");
+	listItem.classList.toggle("to-do__task_edit");
 };
 
 

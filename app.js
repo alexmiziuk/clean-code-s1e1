@@ -10,8 +10,10 @@
 
 var taskInput=document.getElementById("input-task");//Add a new task.
 var addButton=document.querySelector(".add-task__btn");//first button
-var incompleteTaskHolder=document.getElementById("incomplete-tasks");//ul of #incompleteTasks
-var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
+/* var incompleteTaskHolder=document.getElementById("incomplete-tasks"); *///ul of #incompleteTasks
+/* var completedTasksHolder = document.getElementById("completed-tasks"); *///completed-tasks
+var incompleteTaskHolder = document.querySelector('.to-do__list_incomplete');
+var completedTasksHolder = document.querySelector('.to-do__list_completed');
 
 
 //New task list item

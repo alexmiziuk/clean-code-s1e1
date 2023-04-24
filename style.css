@@ -129,7 +129,7 @@ button {
 .to-do__img:hover {
   transform: rotateZ(0);
 }
-#completed-tasks
+.to-do__list_completed
 .to-do__name {
   text-decoration: line-through;
   color: #888;

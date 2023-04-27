@@ -57,7 +57,7 @@ button {
   cursor: pointer;
 }
 :root {
-  --hover-color: #3a3A3a;
+  --hover-color: #3a3a3a;
 }
 .add-task__btn:hover,
 .to-do__edit:hover,
@@ -86,8 +86,8 @@ button {
   line-height: 18px;
   height: 21px;
   padding: 0 9px;
-  border: 1px solid #dDd;
-  background: #FFF;
+  border: 1px solid #ddd;
+  background: #fff;
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
@@ -151,4 +151,8 @@ button {
 }
 .to-do__task_remove {
   display: none;
+}
+.to-do__name {
+  line-height: 0px;
+  font-weight: 500;
 }
